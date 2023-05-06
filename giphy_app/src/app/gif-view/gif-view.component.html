@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="sticky-top bg-white pb-10 w-100 head">
+    <h1 class="text-center my-4 text-white">Giphy Search</h1>
+    <h4 class="text-center my-2 text-white pb-3">Showing {{(gifs$ | async)?.gifs.length}} results</h4>
+    <div class="text-center search-bar pb-10">
+      <input 
+        type="text"
+        class="form-control w-75 "
+        placeholder="Search..."
+        (input)="onSearchInput($event)"
+      />
+    </div>
+  </div>
+  
+  <div class="row mt-4">
+    <div class="col-md-4" *ngFor="let gif of (gifs$ | async)?.gifs">
+      <div class="card mb-4">
+        <img [src]="gif.images.fixed_height.url" class="card-img-top" alt="GIF" />
+      </div>
+    </div>
+  </div>
+  
+  <div class="text-center" ngxInfiniteScroll  (scrolled)="onScroll()">
+    <div class="spinner-border" *ngIf="(gifs$ | async)?.loading" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+  </div>

@@ -1,0 +1,90 @@
+body {
+  background-color: #f8f9fa;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  width: 100%;
+}
+
+h1,
+h4 {
+  font-weight: bold;
+}
+
+
+.sticky-top {
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  animation: fadeIn 1s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  transition: transform 0.2s;
+}
+
+.card-img-top:hover {
+  transform: scale(1.1);
+}
+
+.form-control {
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0.6rem;
+}
+
+.spinner-border {
+  color: #333;
+}
+
+.head {
+    margin: 0px auto 24px;
+    width: 100%;
+    height: 214px;
+    border-radius: 0px 0px 16px 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url("https://app.uizard.io/static/media/gradientBg.1c570b5f088b7254b520.png");
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
+
+
+/* For mobile devices */
+@media (max-width: 767px) {
+  .container {
+      width: 100%;
+      padding: 0;
+  }
+}
+
+/* For tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+      width: 750px;
+  }
+}
+
+/* For desktops */
+@media (min-width: 992px) {
+  .container {
+      width: 970px;
+  }
+}
