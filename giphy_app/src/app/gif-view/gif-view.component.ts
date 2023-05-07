@@ -45,7 +45,6 @@ export class GifViewComponent implements OnInit {
       const windowBottom = windowHeight + window.pageYOffset;
 
       if (windowBottom >= docHeight) {
-        console.log("hi");
         this.offset += 10;
         this.store.dispatch(GifActions.searchGifs({ query: this.currValue, offset: this.offset, replace: false }));
       }
